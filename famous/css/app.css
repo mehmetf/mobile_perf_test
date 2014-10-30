@@ -1,0 +1,18 @@
+html {
+    background-color: #fff;
+    color: #000;
+}
+.card{
+  background-color: white;
+  padding: 8px;
+  box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+  border-radius: 2px;
+  margin: 5px;
+}
+.outer_card {
+  background-color: white;
+}
+.menu{
+  border-right: 1px black solid;
+  background-color: white;
+}

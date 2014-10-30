@@ -1,0 +1,56 @@
+<!doctype html>
+<html ng-app="docsApp" ng-controller="DocsCtrl" lang="en">
+<head>
+<title>Material Design</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular-animate/angular-animate.min.js"></script>
+<script src="lib/angular-aria/angular-aria.min.js"></script>
+<script src="lib/angular-material/angular-material.min.js"></script>
+<script src="lib/hammerjs/hammer.min.js"></script>
+<script src="app.js"></script>
+<link rel="stylesheet" href="app.css">
+</head>
+<body layout="horizontal" md-swipe-right="openMenu()">
+  <md-sidenav layout="vertical" class="md-sidenav-left md-whiteframe-z3" component-id="left">
+    <md-toolbar class="md-theme-light">
+      <h1 class="md-toolbar-tools" style="padding-top:25px;">
+        Demo
+      </h1>
+    </md-toolbar>
+    <md-content flex>
+      <div>
+         Login
+      </div>
+      <div>
+         Search
+      </div>
+      <div>
+         Browse
+      </div>
+      <div>
+         Playlists
+      </div>
+    </md-content>
+  </md-sidenav>
+  <div layout="vertical" layout-fill tabIndex="-1" role="main">
+    <md-toolbar class="md-theme-dark app-toolbar">
+      <div class="md-toolbar-tools" ng-click="openMenu()">
+        <button class="menu-icon" hide-md aria-label="Toggle Menu">
+          <md-icon icon="ic_menu_24px.svg">
+          </md-icon>
+        </button>
+        <p>
+          Playlists 
+        </p>
+      </div>
+    </md-toolbar>
+    <md-content scroll-y flex class="md-content-padding">
+      <md-card ng-repeat="playlist in playlists">
+        <img style="width: 100px; height: 100px;" ng-src="{{playlist.id}}.jpg">
+        {{playlist.title}}
+      </md-card>
+    </md-content>
+  </div>
+</body>
+

@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <script src="src/wtf_trace_web_js_compiled.js"></script>
+        <title>famo.us App</title>
+        <meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no" />
+        <meta name="mobile-web-app-capable" content="yes" />
+
+        <!-- module loader -->
+        <script type="text/javascript" src="https://code.famo.us/lib/require.js"></script>
+
+        <!-- famous -->
+        <link rel="stylesheet" type="text/css" href="https://code.famo.us/famous/0.3/famous.css" />
+        <script type="text/javascript" src="https://code.famo.us/famous/0.3/famous.js"></script>
+
+        <!-- cordova -->
+        <script type="text/javascript" src="cordova.js"></script>
+
+        <!-- app code -->
+        <link rel="stylesheet" type="text/css" href="css/app.css" />
+        <script type="text/javascript">
+            require.config({baseUrl: 'src/'});
+            require(['main']);
+            wtf.remote.connect({
+              'wtf.remote.target': 'ws://mehmet.mtv.corp.google.com:8084'
+            });
+            wtf.trace.start();
+        </script>
+    </head>
+    <body></body>
+</html>
