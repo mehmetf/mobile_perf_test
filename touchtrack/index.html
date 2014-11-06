@@ -1,11 +1,22 @@
 <html>
 <head>
   <script src="ript.js"></script>
+  <style>
+    @-webkit-keyframes myfirst {
+      from {background: red;}
+      to {background: blue;}
+    }
+    .rainbox {
+      height: 100;
+      width: 100%;
+      -webkit-animation: myfirst 5s linear 2s infinite alternate;
+    }
+  </style>
 </head>
 <body ontouchmove="onMove(event);">
-  <div id="surface"
-       style="width: 100; height: 100; background: red"
-  >
+  <div id="surface" style="width: 100; height: 100; background: red">
+  </div>
+  <div class="rainbox">
   </div>
 </body>
 </html>
